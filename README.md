@@ -1,21 +1,58 @@
 # An Analysis of Kickstarter Campaigns
-Performing analysis on Kickstarter to uncover trends.
+Performing analysis on Kickstarter to uncover trends. 
 
-Louise - Plays -- $10,000 budget
+Data from this analysis is from 2014 to 2016. We used [Kickstarter data](https://github.com/fobordo/kickstarter-analysis/blob/897c38e46b8bfb5d1c071d5217a07f5ffa570f69/data-1-1-3-StarterBook.xlsx) to find trends, patterns, and insights into Kickstarter campaigns.
 
 During the analysis, various helpful insights were identified, such as:
-- Theatre Kickstarter Outcomes Based on Launch Date
-- Theatre Kickstarter Statistics
-- Play Kickstarter Statistics
-- Edinburgh Kickstarter Research
-- Successful vs. Failed US Kickstarters
+1. Theatre Kickstarter Outcomes Based on Launch Date
+2. US Theatre Kickstarter Outcomes
+3. Great Britain Play Kickstarter Outcomes
+4. Edinburgh Kickstarter Research
+5. Successful vs. Failed US Kickstarters
 
-## Theatre Kickstarter Outcomes Based on Launch Date
+## 1. Theatre Kickstarter Outcomes Based on Launch Date
 
-Digging into the data, it was found that some kickstarters were more successful than other depending on the launch date.
+Digging into the data, it was found that some kickstarters were more successful than others depending on the launch date.
 
-![Outcomes Based on Launch Date](https://github.com/fobordo/kickstarter-analysis/blob/3b524fc106eeee199d03d1435aa3056f1b91a51a/Outcomes%20Based%20on%20Launch%20Date%20Chart.png)
+![2014-2016 Theatre Kickstarter Outcomes Based on Launch Date](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/Outcomes%20Based%20on%20Launch%20Date%20Chart.png)
 
-The chart above
+The "2014-2016 Theatre Kickstarter Outcomes Based on Launch Date" chart above shows that from 2014 to 2016, the most successful kickstarters were launched in May, while the most failed were launched in May, June, July, August, and October. Though 52 theatre kickstarters that launched in May failed, 111 theatre kickstarters that launched in May were successful, indicating the chances of success were greater than those of failure. **To increase your chances of a successful kickstarter, we suggest it should be launched in May.**
 
-![Parent Category Outcomes Chart](https://github.com/fobordo/kickstarter-analysis/blob/3b524fc106eeee199d03d1435aa3056f1b91a51a/Parent%20Category%20Outcomes%20Chart.png)
+## 2. US Theatre Kickstarter Outcomes
+
+![2014-2016 US Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/US%20Kickstarter%20Outcomes.png)
+
+Next, we looked into US kickstarter outcomes and statistics from 2014 to 2016, and compared theatre against several different categories such as film & video, photography, and technology.
+
+![2014-2016 US Theatre Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/US%20Theatre%20Kickstarter%20Outcomes.png)
+
+Doing a deepdive into the theatre category, the "2014-2016 US Theatre Kickstarter Outcomes" chart above shows 58% (525 out of 912) theatre kickstarters launched in the US were successful. The theatre kickstarter success rate was comparable to music, which had a 77% success rate, and film & video, which had a 62% success rate.
+
+## 3. Great Britain Play Kickstarter Outcomes
+
+![2014-2016 Great Britain Play Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/GB%20Play%20Kickstarter%20Outcomes.png)
+
+In the case of play kickstarters in Great Britain, it was found that 76% (238 out 314) launched were successful.
+
+## 4. Edinburgh Kickstarter Research
+
+We also looked into the following five plays from the Edinburgh Festival Fringe, including goals, amounts pledged, average donations, and number of backers.
+
+![Edinburgh Research](https://github.com/fobordo/kickstarter-analysis/blob/07b553a81416cccabeff334c6a3022212bd79718/Edinburgh%20Research.png)
+
+![2014-2016 Great Britain Musical Kickstarter Goals and Pledges](https://github.com/fobordo/kickstarter-analysis/blob/9a6c5a2308c726ec81c99dbeb1b82475bce336b6/Great%20Britain%20Musical%20Kickstarter%20Outcomes.png)
+
+The "2014-2016 Great Britain Musical Kickstarter Goals and Pledges" box plot above shows that the average campaign goal was around £4000. We would suggest getting producing a play for less than £4,000 in order for it to be successful.
+
+## 5. Successful vs. Failed US Kickstarters
+
+Finally, we performed a statistical analysis of successful versus failed US kickstarters.
+
+![Successful vs. Failed US Kickstarters](https://github.com/fobordo/kickstarter-analysis/blob/897c38e46b8bfb5d1c071d5217a07f5ffa570f69/Successful%20vs.%20Failed%20US%20Kickstarters.png)
+
+In summary, the main takeaways from this analysis were that successful US kickstarts had an average goal of $5000, while those that failed had an average goal of $10,000. In order to increase your chances of launching a successful kickstarter, we suggest having an average goal of around $5000.
+
+## Recommendations
+
+The recommendations we would suggest based on our analyses and findings would be to:
+- Launch your kickstarter in May
