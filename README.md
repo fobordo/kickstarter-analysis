@@ -2,13 +2,11 @@
 
 ## Overview of Project
 
-The purpose of this analysis was to uncover trends in [Kickstarter data](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Kickstarter_Challenge%20copy.xlsx.zip) to determine the best practices to follow for success in launching a theatre or play Kickstarter campaign in countries such as the US and Great Britain. The Kickstarter data used in this analysis was from the years 2014 to 2016.
+The purpose of this analysis was to uncover trends in [Kickstarter data](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Kickstarter_Challenge%20copy.xlsx.zip) from 2014 to 2016 to determine the best practices to follow for success in launching a theatre or play Kickstarter campaign in countries such as the US and Great Britain.
 
 ## Analysis and Challenges
 
-Initially, the analysis was performed by cleaning up the Kickstarter data in order to make it more readable and searchable. The first challenge was interpreting the data in columns "deadline" and "launched_at." The data in these columns was not in a readable format, and contained long, random numbers that didn't add any value to the data story. In order to make this data more readable, I used a Unix Timestamp Converter to confirm that the numbers weren't just random, and were, in fact, Unix Timestamps. After confirming that the numbers represented Unix Timestamps, I used formulas in Excel to create two new columns to convert the numbers to a more readable format. The two new columns, "Date Created Conversion" and "Date Ended Conversion" converted the "launched_at" and "deadline" numbers to "DD/MM/YYYY" date formats, allowing me to better observe the metrics for trends. 
-
-Once the data was cleaned up and in more readable and searchable formats, I performed a deep-dive analysis on the following two metrics: Outcomes Based on Launch Date and Outcomes Based on Goals.
+Initially, before the analysis could be performed, the Kickstarter data was cleaned in order to make it more readable and searchable. This involved ensuring all the data was in the proper format, and separated into individual columns as necessary. Once the data was cleaned up and in more readable and searchable formats, a deep-dive analysis was performed on the following two metrics: Outcomes Based on Launch Date and Outcomes Based on Goals.
 
 ### Analysis of Outcomes Based on Launch Date
 
@@ -41,11 +39,13 @@ Using the data from the new table, a line graph was created to visualize the dat
 
 ![Outcomes Based on Goal Graph](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Outcomes_vs_Goals.png)
 
-The "Outcomes Based on Goal" graph above shows that from 2014 to 2016, the highest percentage of successful play Kickstarter campaigns had goals of less than $1,000 or $1,000 to $4,999. The play campaigns with goals of less than $1,000 had the highest success rate of 76%, while those with goals within the range of $1,000 to $4,999 had a success rate of 73%. Interestingly, most other data points for the success rates of other goal ranges fell below 60%, except for two goal ranges. The play campaigns with goals of $35,000 to $39,999 and $40,000 to $44,999 each had a success rate of 67%, indicating that the goal range does not necessarily need to stay below $4,999 to be successful.
+The "Outcomes Based on Goal" graph above shows that from 2014 to 2016, the highest percentage of successful play Kickstarter campaigns had goals of less than $1,000, or $1,000 to $4,999. The play campaigns with goals of less than $1,000 had the highest success rate of 76%, while those with goals within the range of $1,000 to $4,999 had a success rate of 73%. Interestingly, most other data points for the success rates of other goal ranges fell below 60%, except for two goal ranges. The play campaigns with goals of $35,000 to $39,999 and $40,000 to $44,999 each had a success rate of 67%, indicating that the goal range does not necessarily need to stay below $4,999 to be successful.
 
-On the other hand, the graph shows that the two highest percentage of failed play Kickstarter campaigns had goals of $45,000 to $49,999 or greater than $50,000, respectively. The play campaigns with goals of $45,000 to $49,999 had the highest failure rate of 100%. The runner-up was play campaigns with goals greater than $50,000, which had a failure rate of 88%.
+On the other hand, the graph shows that the two highest percentage of failed play Kickstarter campaigns had goals of $45,000 to $49,999, or greater than $50,000, respectively. The play campaigns with goals of $45,000 to $49,999 had the highest failure rate of 100%. The runner-up was play campaigns with goals greater than $50,000, which had a failure rate of 88%.
 
 ### Challenges and Difficulties Encountered
+
+The first challenge was interpreting the data in columns "deadline" and "launched_at." The data in these columns was not in a readable format, and contained long, random numbers that didn't add any value to the data story. In order to make this data more readable, a [Unix Timestamp Converter](https://www.epochconverter.com/) was used to confirm that the numbers weren't just random, and were, in fact, Unix Timestamps. After confirming that the numbers represented Unix Timestamps, two new columns were created in Excel containing formulas to convert the numbers to a more readable format. The two new columns, "Date Created Conversion" and "Date Ended Conversion" converted the "launched_at" and "deadline" numbers to "DD/MM/YYYY" date formats, allowing a better observation of the metrics for trends and patterns. 
 
 In addition to the challenge of interpreting the data for launch dates and deadlines, another challenge was having to separate the data in the "Category and Subcategory" column into two columns for "Parent Category" and "Subcategory" in order to analyze the data for trends based on each metric individually. Other challenges included determining what metrics should be calculated to reveal more trends in the data, such as percentage of goals funded abd average donations pledged.
 
@@ -67,9 +67,9 @@ Three conclusions that can be made about the analysis of Outcomes Based on Goals
 
 ### Limitations of the Dataset
 
-Some limitations of this dataset are the timeframe this data was pulled from, that being 2014 to 2016. Since seven years have passed since the earliest data from this dataset was collected, it is quite possible that the data for past few years could show very different trends. The data also only ranges the span of two years, limiting the accuracy of the conclusions drawn from this analysis. If data was pulled from, say, the years 2019 to 2021, the data would be heavily skewed due to the COVID-19 pandemic. As such, it would be best to analyze a larger timeframe in order to level out any possible biases in data.
+Some limitations of the dataset are the timeframe this data was pulled from, that being 2014 to 2016. Since seven years have passed since the earliest data from this dataset was collected, it is quite possible that data from more recent years could show very different trends. The data also only ranges the span of two years, limiting the accuracy of the conclusions drawn from this analysis. If data was pulled from, say, the years 2019 to 2021, the data would be heavily skewed by the impact the COVID-19 pandemic had on the world. As such, it would be best to analyze a larger timeframe in order to level out any possible biases in the data.
 
-Another limitation is the breakdown of categories. In the analysis of Outcomes Based on Goals for play Kickstarter campaigns, we saw that play campaigns with goals of $35,000 to $44,999 had the third highest success rate of 67%. This was a very specific goal range, but our conclusions were limited to the overarching subcategory of "plays," so we couldn't perform an even deeper analysis of what kind of plays,   specifically, succeeeded in this goal range. More in-depth insights could be analyzed if a sub-subcategory for types of plays could be pulled from the Kickstarter data.
+Another limitation is the breakdown of categories. In the analysis of Outcomes Based on Goals for play Kickstarter campaigns, we saw that play campaigns with goals of $35,000 to $44,999 had the third highest success rate of 67%. This was a very specific goal range, but our conclusions were limited to the broad subcategory of "plays," so we couldn't perform an even deeper analysis of what kind of plays, specifically, succeeeded in this goal range. More in-depth insights could be analyzed if a sub-subcategory for types of plays could be pulled from the Kickstarter data.
 
 ### Other Possible Tables/Graphs
 
