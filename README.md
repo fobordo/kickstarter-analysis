@@ -1,64 +1,76 @@
-# An Analysis of Kickstarter Campaigns
-Performing analysis on Kickstarter to uncover trends. 
+# Kickstarting with Excel
 
-Data from this analysis is from 2014 to 2016. We used [Kickstarter data](https://github.com/fobordo/kickstarter-analysis/blob/897c38e46b8bfb5d1c071d5217a07f5ffa570f69/data-1-1-3-StarterBook.xlsx) to find trends, patterns, and insights into Kickstarter campaigns.
+## Overview of Project
 
-During the analysis, various helpful insights were identified, such as:
-1. Theatre Kickstarter Outcomes Based on Launch Date
-2. US Theatre Kickstarter Outcomes
-3. Great Britain Play Kickstarter Outcomes
-4. Edinburgh Kickstarter Research
-5. Successful vs. Failed US Kickstarters
+The purpose of this analysis was to uncover trends in [Kickstarter data](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Kickstarter_Challenge%20copy.xlsx.zip) to determine the best practices to follow for success in launching a theatre or play Kickstarter campaign in countries such as the US and Great Britain. The Kickstarter data used in this analysis was from the years 2014 to 2016.
 
-## 1. Theatre Kickstarter Outcomes Based on Launch Date
+## Analysis and Challenges
 
-Digging into the data, it was found that some kickstarters were more successful than others depending on the launch date.
+Initially, the analysis was performed by cleaning up the Kickstarter data in order to make it more readable and searchable. The first challenge was interpreting the data in columns "deadline" and "launched_at." The data in these columns was not in a readable format, and contained long, random numbers that didn't add any value to the data story. In order to make this data more readable, I used a Unix Timestamp Converter to confirm that the numbers weren't just random, and were, in fact, Unix Timestamps. After confirming that the numbers represented Unix Timestamps, I used formulas in Excel to create two new columns to convert the numbers to a more readable format. The two new columns, "Date Created Conversion" and "Date Ended Conversion" converted the "launched_at" and "deadline" numbers to "DD/MM/YYYY" date formats, allowing me to better observe the metrics for trends. 
 
-![2014-2016 Theatre Kickstarter Outcomes Based on Launch Date](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/Outcomes%20Based%20on%20Launch%20Date%20Chart.png)
+Once the data was cleaned up and in more readable and searchable formats, I performed a deep-dive analysis on the following two metrics: Outcomes Based on Launch Date and Outcomes Based on Goals.
 
-The "2014-2016 Theatre Kickstarter Outcomes Based on Launch Date" chart above shows that from 2014 to 2016, the most successful kickstarters were launched in May, while the most failed were launched in May, June, July, August, and October. Though 52 theatre kickstarters that launched in May failed, 111 were successful, indicating the chances of success were greater than those of failure. **To increase your chances of a successful kickstarter, we suggest it should be launched in May.**
+### Analysis of Outcomes Based on Launch Date
 
-## 2. US Theatre Kickstarter Outcomes
+In the analysis of Outcomes Based on Launch Date, focus was given to the launch dates of theatre Kickstarters, specifically, to determine if this metric had any impact on the outcomes of those campaigns. A PivotTable was created to include the count of successful, failed, cancelled, and total number of campaigns by launch date month, filtered to calculate results for only theatre campaigns, as seen below.
 
-![2014-2016 US Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/US%20Kickstarter%20Outcomes.png)
+#### Theatre Outcomes Based on Launch Date PivotTable
 
-Next, we looked into US kickstarter outcomes and statistics from 2014 to 2016, and compared theatre against several different categories such as film & video, photography, and technology.
+![Theatre Outcomes Based on Launch Date PivotTable](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch_PivotTable.png)
 
-![2014-2016 US Theatre Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/US%20Theatre%20Kickstarter%20Outcomes.png)
+Digging into the data, the PivotTable showed that some Kickstarters were more successful than others depending on the launch date month. Using the data from the PivotTable, a line graph was created to reveal these trends.
 
-Doing a deepdive into the theatre category, the "2014-2016 US Theatre Kickstarter Outcomes" chart above shows 58% (525 out of 912) theatre kickstarters launched in the US were successful. The theatre kickstarter success rate was comparable to music, which had a 77% success rate, and film & video, which had a 62% success rate.
+#### Theatre Outcomes Based on Launch Date Graph
 
-We found that the success rate of theatre kickstarters in Great Britain were greater, with a success rate of 72% (258 out 359).
+![Theatre Outcomes Based on Launch Date Graph](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch.png)
 
-## 3. Great Britain Play Kickstarter Outcomes
+The "Theatre Outcomes Based on Launch Date" graph above shows that from 2014 to 2016, the most successful theatre Kickstarters were launched in May. Ironically, the most failed were also launched in May. Diving further into these metrics, 111 out of 166, or 66.9% of theatre campaigns launched in May were successful, while 52 out of 166, or 31.3% failed. Although the largest number of failures occurred in May, the data shows that the rate of success for theatre campaigns launched in May was still significantly higher than the rate of failure.
 
-![2014-2016 Great Britain Play Kickstarter Outcomes](https://github.com/fobordo/kickstarter-analysis/blob/51725a72feb8d3daa3bb6949af05434fe8e8d023/GB%20Play%20Kickstarter%20Outcomes.png)
+The graph reveals another interesting metric for the month of December. Theatre campaigns that were launched in December had an almost equal success and failure rate, with a success rate of 49.3% (37 out of 75) and failure rate of 46.7% (35 out of 75). The data suggests that if a theatre campaign is launched in December, it has an almost 50/50 chance of success.
 
-In the case of play kickstarters in Great Britain, it was found that 76% (238 out 314) launched were successful. Comparing this metric to play kickstarters in the US, it was found that 61% (412 out 671) were successful. These metrics suggest you would have a greater chance of success launching a play kickstarter in Great Britain.
+### Analysis of Outcomes Based on Goals
 
-## 4. Edinburgh Kickstarter Research
+In the analysis of Outcomes Based on Goals, focus was given to the monetary goals of play Kickstarters to determine if this metric had any impact on the outcomes of those campaigns. In order to reveal any trends in the data, a new table was created, which extracted the goal ranges, number of successful, failed, and canceled campaigns, total projects, and percentage of successful, failed, and canceled campaigns of play Kickstarters from the Kickstarter data. 
 
-We also looked into the following five plays from the Edinburgh Festival Fringe, including goals, amounts pledged, average donations, and number of backers.
+#### Outcomes Based on Goal Table
+![Outcomes Based on Goal Table](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Outcomes_vs_Goals_Table.png)
 
-![Edinburgh Research](https://github.com/fobordo/kickstarter-analysis/blob/07b553a81416cccabeff334c6a3022212bd79718/Edinburgh%20Research.png)
+Using the data from the new table, a line graph was created to visualize the data, which uncovered a trend that showed the correlation between goal range and percentage of successful, failed, and canceled play campaigns.
 
-![2014-2016 Great Britain Musical Kickstarter Goals and Pledges](https://github.com/fobordo/kickstarter-analysis/blob/9a6c5a2308c726ec81c99dbeb1b82475bce336b6/Great%20Britain%20Musical%20Kickstarter%20Outcomes.png)
+#### Outcomes Based on Goal Graph
 
-The "2014-2016 Great Britain Musical Kickstarter Goals and Pledges" box plot above shows that the average campaign goal was around £4000. We would suggest producing a play for less than £4,000 in order for it to be successful.
+![Outcomes Based on Goal Graph](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Outcomes_vs_Goals.png)
 
-## 5. Successful vs. Failed US Kickstarters
+The "Outcomes Based on Goal" graph above shows that from 2014 to 2016, the highest percentage of successful play Kickstarter campaigns had goals of less than $1,000 or $1,000 to $4,999. The play campaigns with goals of less than $1,000 had the highest success rate of 76%, while those with goals within the range of $1,000 to $4,999 had a success rate of 73%. Interestingly, most other data points for the success rates of other goal ranges fell below 60%, except for two goal ranges. The play campaigns with goals of $35,000 to $39,999 and $40,000 to $44,999 each had a success rate of 67%, indicating that the goal range does not necessarily need to stay below $4,999 to be successful.
 
-Finally, we performed a statistical analysis of successful versus failed US kickstarters.
+On the other hand, the graph shows that the two highest percentage of failed play Kickstarter campaigns had goals of $45,000 to $49,999 or greater than $50,000, respectively. The play campaigns with goals of $45,000 to $49,999 had the highest failure rate of 100%. The runner-up was play campaigns with goals greater than $50,000, which had a failure rate of 88%.
 
-![Successful vs. Failed US Kickstarters](https://github.com/fobordo/kickstarter-analysis/blob/897c38e46b8bfb5d1c071d5217a07f5ffa570f69/Successful%20vs.%20Failed%20US%20Kickstarters.png)
+### Challenges and Difficulties Encountered
 
-In summary, the main takeaways from this analysis were that successful US kickstarts had an average goal of $5000, while those that failed had an average goal of $10,000. In order to increase your chances of launching a successful kickstarter, we suggest having a campaign goal of around $5000.
+In addition to the challenge of interpreting the data for launch dates and deadlines, another challenge was having to separate the data in the "Category and Subcategory" column into two columns for "Parent Category" and "Subcategory" in order to analyze the data for trends based on each metric individually. Other challenges included determining what metrics should be calculated to reveal more trends in the data, such as percentage of goals funded abd average donations pledged.
 
-## Recommendations
+## Results
 
-Upon completion of our analysis, we established the following recommendations to optimize your chances of a successful campaign:
-- Launch your kickstarter in May
-- A theatre kickstarter would have a greater success rate of 72% in Great Britain than 58% in the US
-- A play kickstarter would have a greater success rate of 76% in Great Britain than 61% in the US
-- For a musical kickstarter in Great Britain, the campaign goal should be less than £4,000
-- For a kickstarter in the US, the campaign goal should be less than $5000
+### Conclusions on Outcomes Based on Launch Date
+
+Two conclusions that can be drawn about the Outcomes based on Launch Date are as follows:
+
+1. To increase the chances of a successful theatre Kickstarter campaign, the data suggests it should be launched during the month of May.
+2. Theatre campaigns launched in December have an almost 50/50 chance of success or failure, suggesting it would be best to avoid launching a campaign during this month.
+
+### Conclusions on Outcomes Based on Goals
+
+Three conclusions that can be made about the analysis of Outcomes Based on Goals are as follows:
+1. To optomize the chances of a successful play Kickstarter, the goal should remain below $5,000.
+2. If the campaign will be a more costly production, the next optimal goal range would be $35,000 to $44,999.
+3. The goal range to absolutely avoid would be anything greater than $45,000 because this range had the highest percentage of failed campaigns.
+
+### Limitations of the Dataset
+
+Some limitations of this dataset are the timeframe this data was pulled from, that being 2014 to 2016. Since seven years have passed since the earliest data from this dataset was collected, it is quite possible that the data for past few years could show very different trends. The data also only ranges the span of two years, limiting the accuracy of the conclusions drawn from this analysis. If data was pulled from, say, the years 2019 to 2021, the data would be heavily skewed due to the COVID-19 pandemic. As such, it would be best to analyze a larger timeframe in order to level out any possible biases in data.
+
+Another limitation is the breakdown of categories. In the analysis of Outcomes Based on Goals for play Kickstarter campaigns, we saw that play campaigns with goals of $35,000 to $44,999 had the third highest success rate of 67%. This was a very specific goal range, but our conclusions were limited to the overarching subcategory of "plays," so we couldn't perform an even deeper analysis of what kind of plays,   specifically, succeeeded in this goal range. More in-depth insights could be analyzed if a sub-subcategory for types of plays could be pulled from the Kickstarter data.
+
+### Other Possible Tables/Graphs
+
+An example of another possible table and graph we could create are Outcomes Based on Goals for plays in Great Britain versus the US to find trends from the two countries separately. Similarly, we could create a table and graph for Theatre Outcomes Based on Launch Date for theatre campaigns in Great Britain versus the US to see if there are any differences in trends. Other examples of tables and graphs we could create would be for Outcomes of Parent Categories by country, Outcomes of Subcategories by country, Outcomes Based on Percentage Funded, or Outcomes Based on Average Donation.
