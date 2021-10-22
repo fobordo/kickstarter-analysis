@@ -10,13 +10,13 @@ Initially, before the analysis could be performed, the Kickstarter data was clea
 
 ### Analysis of Outcomes Based on Launch Date
 
-In the analysis of Outcomes Based on Launch Date, focus was given to the launch dates of theatre Kickstarters, specifically, to determine if this metric had any impact on the outcomes of those campaigns. A PivotTable was created to include the count of successful, failed, cancelled, and total number of campaigns by launch date month, filtered to calculate results for only theatre campaigns, as seen below.
+In the analysis of Outcomes Based on Launch Date, focus was given to the launch dates of theatre Kickstarters, specifically, to determine if this metric had any impact on the outcomes of those campaigns. A pivot table was created to include the count of successful, failed, cancelled, and total number of campaigns by launch date month, filtered to calculate results for only theatre campaigns, as seen below.
 
-#### Theatre Outcomes Based on Launch Date PivotTable
+#### Theatre Outcomes Based on Launch Date Pivot Table
 
-![Theatre Outcomes Based on Launch Date PivotTable](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch_PivotTable.png)
+![Theatre Outcomes Based on Launch Date Pivot Table](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch_PivotTable.png)
 
-Digging into the data, the PivotTable showed that some Kickstarters were more successful than others depending on the launch date month. Using the data from the PivotTable, a line graph was created to reveal these trends.
+Digging into the data, the pivot table showed that some Kickstarters were more successful than others depending on the launch date month. Using the data from the pivot table, a line graph was created to reveal these trends.
 
 #### Theatre Outcomes Based on Launch Date Graph
 
