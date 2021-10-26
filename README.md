@@ -14,13 +14,13 @@ In the analysis of Outcomes Based on Launch Date, focus was given to the launch 
 
 #### Theatre Outcomes Based on Launch Date Pivot Table
 
-![Theatre Outcomes Based on Launch Date Pivot Table](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch_PivotTable.png)
+![Theatre Outcomes Based on Launch Date Pivot Table](/Resources/Theater_Outcomes_vs_Launch_PivotTable.png)
 
 Digging into the data, the pivot table showed that some Kickstarters were more successful than others depending on the launch date month. Using the data from the pivot table, a line graph was created to reveal these trends.
 
 #### Theatre Outcomes Based on Launch Date Graph
 
-![Theatre Outcomes Based on Launch Date Graph](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Theater_Outcomes_vs_Launch.png)
+![Theatre Outcomes Based on Launch Date Graph](/Resources/Theater_Outcomes_vs_Launch.png)
 
 The "Theatre Outcomes Based on Launch Date" graph above shows that from 2014 to 2016, the most successful theatre Kickstarters were launched in May. Ironically, the most failed were also launched in May. Diving further into these metrics, 111 out of 166, or 66.9% of theatre campaigns launched in May were successful, while 52 out of 166, or 31.3% failed. Although the largest number of failures occurred in May, the data shows that the rate of success for theatre campaigns launched in May was still significantly higher than the rate of failure.
 
@@ -31,13 +31,13 @@ The graph reveals another interesting metric for the month of December. Theatre 
 In the analysis of Outcomes Based on Goals, focus was given to the monetary goals of play Kickstarters to determine if this metric had any impact on the outcomes of those campaigns. In order to reveal any trends in the data, a new table was created, which extracted the goal ranges, number of successful, failed, and canceled campaigns, total projects, and percentage of successful, failed, and canceled campaigns of play Kickstarters from the Kickstarter data. 
 
 #### Outcomes Based on Goal Table
-![Outcomes Based on Goal Table](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Outcomes_vs_Goals_Table.png)
+![Outcomes Based on Goal Table](/Resources/Outcomes_vs_Goals_Table.png)
 
 Using the data from the new table, a line graph was created to visualize the data, which uncovered a trend that showed the correlation between goal range and percentage of successful, failed, and canceled play campaigns.
 
 #### Outcomes Based on Goal Graph
 
-![Outcomes Based on Goal Graph](https://github.com/fobordo/kickstarter-analysis/blob/cb1ee7c131f969fe81963381501d0e881acdfcc7/Outcomes_vs_Goals.png)
+![Outcomes Based on Goal Graph](/Resources/Outcomes_vs_Goals.png)
 
 The "Outcomes Based on Goal" graph above shows that from 2014 to 2016, the highest percentage of successful play Kickstarter campaigns had goals of less than $1,000, or $1,000 to $4,999. The play campaigns with goals of less than $1,000 had the highest success rate of 76%, while those with goals within the range of $1,000 to $4,999 had a success rate of 73%. Interestingly, most other data points for the success rates of other goal ranges fell below 60%, except for two goal ranges. The play campaigns with goals of $35,000 to $39,999 and $40,000 to $44,999 each had a success rate of 67%, indicating that the goal range does not necessarily need to stay below $4,999 to be successful.
 
